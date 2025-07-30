@@ -23,6 +23,21 @@ QLineEdit {
 	padding-left: 6px;
 }
 
+QCheckBox::indicator {
+	width: 20px;
+    height: 20px;
+    border: 2px solid #10B981;
+    border-radius: 4px;
+    background-color: white;
+}
+QCheckBox::indicator:checked {
+    background-color: #34D399; 
+    border: 2px solid #34D399;
+}
+QCheckBox::indicator:unchecked:hover {
+	background-color: #f0f0f0;
+}
+
 #styleSheet {
 	background-color: #F0F0F0;
 }
@@ -87,6 +102,14 @@ QLineEdit {
 	background-color: #3B82F6;
 	border: none;
 	border-radius: 5px;
+}
+
+/* Home Page
+//////////////////////////////////////////////////////////////////////*/
+#homePage {
+	background-image: url(:/images/resources/images/mfcomp.png);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 </string>
@@ -254,6 +277,12 @@ QLineEdit {
        </property>
        <item>
         <widget class="QFrame" name="topMenu">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
          <property name="frameShape">
           <enum>QFrame::Shape::NoFrame</enum>
          </property>
@@ -558,26 +587,7 @@ QLineEdit {
            <property name="currentIndex">
             <number>1</number>
            </property>
-           <widget class="QWidget" name="homePage">
-            <widget class="QLabel" name="label">
-             <property name="geometry">
-              <rect>
-               <x>360</x>
-               <y>190</y>
-               <width>441</width>
-               <height>141</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>32</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>HOME</string>
-             </property>
-            </widget>
-           </widget>
+           <widget class="QWidget" name="homePage"/>
            <widget class="QWidget" name="infoPage">
             <layout class="QVBoxLayout" name="verticalLayout_6">
              <item>
@@ -1698,10 +1708,6 @@ QLineEdit {
         </widget>
        </item>
       </layout>
-      <zorder>topMenu</zorder>
-      <zorder>creditsFrame</zorder>
-      <zorder>rightStackedWidget</zorder>
-      <zorder>settingsFrame</zorder>
      </widget>
     </item>
    </layout>
