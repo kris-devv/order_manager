@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>../resources/icons/cil-library-add.png</file>
+    <file>../resources/icons/icon_close.png</file>
+    <file>../resources/icons/icon_home.png</file>
+    <file>../resources/icons/icon_maximize.png</file>
+    <file>../resources/icons/icon_minimize.png</file>
+    <file>../resources/icons/icon_restore.png</file>
+    <file>../resources/icons/icon_settings.png</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>../resources/images/mfcomp-small.png</file>
+    <file>../resources/images/mfcomp.png</file>
+  </qresource>
+</RCC>
