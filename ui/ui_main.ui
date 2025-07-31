@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1016</width>
-    <height>678</height>
+    <width>1196</width>
+    <height>704</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,6 +38,27 @@ QCheckBox::indicator:unchecked:hover {
 	background-color: #f0f0f0;
 }
 
+QListWidget {
+    background-color: #E5E5E5;
+	border: none;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+QListWidget::item {
+    padding: 6px;
+	padding-left: 12px;
+    border-radius: 6px;
+}
+QListWidget::item:hover {
+    background-color: #3B82F6;
+}
+QListWidget::item:selected {
+    background-color: #F0F0F0;
+	color: #3B82F6;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-left: 4px solid #3B82F6;
+}
 #styleSheet {
 	background-color: #F0F0F0;
 }
@@ -48,6 +69,7 @@ QCheckBox::indicator:unchecked:hover {
 	background-color: #E5E5E5;
 	border: none;
 	border-top-left-radius: 5px;
+	border-bottom: 2px solid #3B82F6;
 }
 #addOrderButton {
 	background-color: #3B82F6;
@@ -55,11 +77,16 @@ QCheckBox::indicator:unchecked:hover {
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 }
-#listWidget {
-	background-color: #E5E5E5;
-	border: none;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
+
+/* Right Section (Pages)
+//////////////////////////////////////////////////////////////////////*/
+#rightContentSection QLineEdit {
+	border: 1px solid #3B82F6;
+	border-radius: 5px;
+}
+#rightContentSection QPlainTextEdit {
+	border: 1px solid #3B82F6;
+	border-radius: 5px;
 }
 
 /* Top Menu
@@ -82,6 +109,11 @@ QCheckBox::indicator:unchecked:hover {
 	background-color: #E5E5E5;
 	border: none;
 }
+#settingsFrame QPushButton{
+	background-color: #3B82F6;
+	border: none;
+	color: white;
+}
 
 /* Credits Frame
 //////////////////////////////////////////////////////////////////////*/
@@ -100,6 +132,7 @@ QCheckBox::indicator:unchecked:hover {
 }
 #rightStackedWidget QPushButton{
 	background-color: #3B82F6;
+	color: white;
 	border: none;
 	border-radius: 5px;
 }
@@ -221,6 +254,9 @@ QCheckBox::indicator:unchecked:hover {
         <widget class="QListWidget" name="listWidget">
          <property name="cursor" stdset="0">
           <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::FocusPolicy::NoFocus</enum>
          </property>
          <item>
           <property name="text">
@@ -708,6 +744,9 @@ QCheckBox::indicator:unchecked:hover {
                    <property name="focusPolicy">
                     <enum>Qt::FocusPolicy::NoFocus</enum>
                    </property>
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
                    <property name="readOnly">
                     <bool>true</bool>
                    </property>
@@ -943,7 +982,7 @@ QCheckBox::indicator:unchecked:hover {
                   <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                  <property name="sizeType">
-                  <enum>QSizePolicy::Policy::Fixed</enum>
+                  <enum>QSizePolicy::Policy::Maximum</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -1233,6 +1272,21 @@ QCheckBox::indicator:unchecked:hover {
            </widget>
            <widget class="QWidget" name="editPage">
             <layout class="QVBoxLayout" name="verticalLayout_5">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>64</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>64</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <spacer name="editPageVSpacer1">
                <property name="orientation">
@@ -1535,7 +1589,7 @@ QCheckBox::indicator:unchecked:hover {
                   <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                  <property name="sizeType">
-                  <enum>QSizePolicy::Policy::Fixed</enum>
+                  <enum>QSizePolicy::Policy::Maximum</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
