@@ -61,6 +61,7 @@ QListWidget::item:selected {
 }
 #styleSheet {
 	background-color: #F0F0F0;
+	border-radius: 5px;
 }
 
 /* Left Section (List)
@@ -252,6 +253,11 @@ QListWidget::item:selected {
        </item>
        <item>
         <widget class="QListWidget" name="listWidget">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="cursor" stdset="0">
           <cursorShape>ArrowCursor</cursorShape>
          </property>
@@ -448,7 +454,7 @@ QListWidget::item:selected {
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="settingsButton">
             <property name="minimumSize">
              <size>
               <width>40</width>
@@ -626,6 +632,21 @@ QListWidget::item:selected {
            <widget class="QWidget" name="homePage"/>
            <widget class="QWidget" name="infoPage">
             <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>64</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>64</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <spacer name="editPageVSpacer1_2">
                <property name="orientation">
@@ -1631,6 +1652,11 @@ QListWidget::item:selected {
              <width>0</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
            </property>
            <property name="frameShape">
             <enum>QFrame::Shape::StyledPanel</enum>
