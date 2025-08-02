@@ -361,7 +361,9 @@ class Ui_MainWindow(object):
         self.infoPage = QWidget()
         self.infoPage.setObjectName(u"infoPage")
         self.verticalLayout_6 = QVBoxLayout(self.infoPage)
+        self.verticalLayout_6.setSpacing(0)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.verticalLayout_6.setContentsMargins(64, 0, 64, 0)
         self.editPageVSpacer1_2 = QSpacerItem(20, 39, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_6.addItem(self.editPageVSpacer1_2)
@@ -497,13 +499,13 @@ class Ui_MainWindow(object):
 
         self.infoPageButtonsLayout.addItem(self.infoPageHSpacer2)
 
-        self.infoPageConfirmButton = QPushButton(self.infoPage)
-        self.infoPageConfirmButton.setObjectName(u"infoPageConfirmButton")
-        self.infoPageConfirmButton.setMinimumSize(QSize(150, 40))
-        self.infoPageConfirmButton.setFont(font1)
-        self.infoPageConfirmButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.infoPagePrintButton = QPushButton(self.infoPage)
+        self.infoPagePrintButton.setObjectName(u"infoPagePrintButton")
+        self.infoPagePrintButton.setMinimumSize(QSize(150, 40))
+        self.infoPagePrintButton.setFont(font1)
+        self.infoPagePrintButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
-        self.infoPageButtonsLayout.addWidget(self.infoPageConfirmButton)
+        self.infoPageButtonsLayout.addWidget(self.infoPagePrintButton)
 
         self.infoPageEditButton = QPushButton(self.infoPage)
         self.infoPageEditButton.setObjectName(u"infoPageEditButton")
@@ -512,14 +514,6 @@ class Ui_MainWindow(object):
         self.infoPageEditButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
         self.infoPageButtonsLayout.addWidget(self.infoPageEditButton)
-
-        self.infoPageCancelButton = QPushButton(self.infoPage)
-        self.infoPageCancelButton.setObjectName(u"infoPageCancelButton")
-        self.infoPageCancelButton.setMinimumSize(QSize(150, 40))
-        self.infoPageCancelButton.setFont(font1)
-        self.infoPageCancelButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-
-        self.infoPageButtonsLayout.addWidget(self.infoPageCancelButton)
 
         self.infoPageHSpacer3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
@@ -900,7 +894,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.rightStackedWidget.setCurrentIndex(3)
+        self.rightStackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -939,9 +933,8 @@ class Ui_MainWindow(object):
         self.infoPageForUsLabel.setText(QCoreApplication.translate("MainWindow", u"Dla nas", None))
         self.infoPageDescLabel.setText(QCoreApplication.translate("MainWindow", u"Opis", None))
         self.infoPageReadyCheckBox.setText(QCoreApplication.translate("MainWindow", u"Gotowe", None))
-        self.infoPageConfirmButton.setText(QCoreApplication.translate("MainWindow", u"Drukuj", None))
+        self.infoPagePrintButton.setText(QCoreApplication.translate("MainWindow", u"Drukuj", None))
         self.infoPageEditButton.setText(QCoreApplication.translate("MainWindow", u"Edytuj", None))
-        self.infoPageCancelButton.setText(QCoreApplication.translate("MainWindow", u"Anuluj", None))
         self.addPageLabel.setText(QCoreApplication.translate("MainWindow", u"Dodawanie zlecenia nr. 3", None))
         self.addPagePhoneLabel.setText(QCoreApplication.translate("MainWindow", u"Nr. tel", None))
         self.addPageModelLabel.setText(QCoreApplication.translate("MainWindow", u"Model", None))

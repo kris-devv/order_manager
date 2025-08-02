@@ -30,12 +30,18 @@ class MainWindow(QMainWindow):
         # Buttons Clicks
         # ///////////////////////////////////////////////////////////////
         self.ui.btnHome.clicked.connect(lambda: self.ui.rightStackedWidget.setCurrentWidget(self.ui.homePage))
+        self.ui.addOrderButton.clicked.connect(lambda: self.ui.rightStackedWidget.setCurrentWidget(self.ui.addPage))
+        self.ui.infoPageEditButton.clicked.connect(lambda: self.ui.rightStackedWidget.setCurrentWidget(self.ui.editPage))
+
+        self.ui.infoPagePrintButton.clicked.connect(self.printOrder)
 
         self.ui.listWidget.itemClicked.connect(self.listWidgetClicked)
-        self.ui.addOrderButton.clicked.connect(lambda: self.ui.rightStackedWidget.setCurrentWidget(self.ui.addPage))
 
-        self.ui.addPageConfirmButton.clicked.connect(self.addOrder)
+        self.ui.addPageConfirmButton.clicked.connect(self.confirmAddOrder)
         self.ui.addPageCancelButton.clicked.connect(lambda: self.ui.rightStackedWidget.setCurrentWidget(self.ui.homePage))
+
+        self.ui.editPageConfirmButton.clicked.connect(self.confirmEditOrder)
+        self.ui.editPageCancelButton.clicked.connect(lambda: self.ui.rightStackedWidget.setCurrentWidget(self.ui.homePage))
 
         def openCloseSettings():
             UIFunctions.toggleSettings(self, True)
@@ -48,7 +54,13 @@ class MainWindow(QMainWindow):
         self.ui.rightStackedWidget.setCurrentWidget(self.ui.homePage)
         self.loadOrdersList()
     
-    def addOrder(self):
+    def confirmAddOrder(self):
+        pass
+
+    def confirmEditOrder(self):
+        pass
+    
+    def printOrder(self):
         pass
         
     def mousePressEvent(self, event):
